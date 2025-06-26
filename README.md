@@ -3,7 +3,7 @@
 [![Java](https://img.shields.io/badge/Java-17%2B-blue.svg)](https://www.oracle.com/java/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A straightforward Java command-line app for managing your daily tasks efficiently. Quickly add, list, complete, and delete tasks via an intuitive terminal interface.
+A simple Java command-line application for managing your daily tasks. Add, view, complete, and delete tasks easily from your terminal with an intuitive interface.
 
 ---
 
@@ -23,10 +23,10 @@ A straightforward Java command-line app for managing your daily tasks efficientl
 ## Features
 
 - Add tasks with title, description, due date, and priority
-- View all tasks in a list
+- View a list of all tasks with their details
 - Mark tasks as completed
 - Delete tasks by ID
-- Simple and interactive CLI with input validation
+- Simple, interactive CLI with input validation
 
 ---
 
@@ -40,8 +40,7 @@ A straightforward Java command-line app for managing your daily tasks efficientl
 
 2. **Compile the source code:**
    ```bash
-   cd src
-   javac *.java
+   javac src/*.java
    ```
 
 ---
@@ -50,8 +49,9 @@ A straightforward Java command-line app for managing your daily tasks efficientl
 
 1. **Run the application:**
    ```bash
-   java Main
+   java -cp src Main
    ```
+
 2. **Example session:**
    ```
    ==== Task Manager ====
@@ -76,6 +76,7 @@ task-manager-cli/
 │   └── TaskManager.java
 ├── .gitignore
 ├── README.md
+└── LICENSE
 ```
 
 ---
@@ -91,7 +92,8 @@ task-manager-cli/
 
 ## Contributing
 
-Pull requests and suggestions are welcome! Please open an issue to discuss changes or enhancements.
+Pull requests and suggestions are welcome!  
+Please [open an issue](https://github.com/K-0x4b/task-manager-cli/issues) to discuss changes or enhancements, or submit a pull request.
 
 ---
 
@@ -105,3 +107,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 **Kareem MohamedElhassan**  
 GitHub: [@K-0x4b](https://github.com/K-0x4b)
+
+---
