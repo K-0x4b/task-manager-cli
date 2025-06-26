@@ -45,10 +45,12 @@ public class Main {
                         }
                     }
 
-                    System.out.print("Enter task priority (1-5): ");
+                    
                     int priority = -1;
                     while (true) {
                         try {
+                            
+                            System.out.print("Enter task priority (1-5): ");
                             priority = scanner.nextInt();
                             scanner.nextLine();
                             if (priority >= 1 && priority <= 5) {
@@ -67,7 +69,8 @@ public class Main {
                     break;
 
                 case 2:
-
+                    System.out.println("Listing all tasks:");
+                    taskManager.listTasks();
                     break;
 
                 case 3:
