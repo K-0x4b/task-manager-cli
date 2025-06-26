@@ -73,11 +73,24 @@ public class Main {
                     break;
 
                 case 3:
-
+                    System.out.print("Enter task ID to mark as completed: ");
+                    int idToComplete;
+                    try {
+                        idToComplete = scanner.nextInt();
+                        scanner.nextLine();
+                        if (taskManager.markTaskCompleted(idToComplete)) {
+                            System.out.println("Task marked as completed.");
+                        } else {
+                            System.out.println("Task not found with ID: " + idToComplete);
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid task ID.");
+                        scanner.nextLine();
+                    }
                     break;
 
                 case 4:
-
+                  
                     break;
 
                 case 5:
