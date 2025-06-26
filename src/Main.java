@@ -8,7 +8,7 @@ public class Main {
         TaskManager taskManager = new TaskManager();
         boolean isWorking = true;
 
-        int reponse = -1;
+        int response = -1;
 
         while (isWorking) {
 
@@ -17,7 +17,7 @@ public class Main {
             System.out.print("Choice: ");
 
             try {
-                reponse = scanner.nextInt();
+                response = scanner.nextInt();
                 scanner.nextLine();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a number between 1-5.");
@@ -25,7 +25,7 @@ public class Main {
                 continue;
             }
 
-            switch (reponse) {
+            switch (response) {
                 case 1:
                     System.out.print("Enter task title: ");
                     String title = scanner.nextLine();
