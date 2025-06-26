@@ -28,15 +28,15 @@ public class Main {
             switch (reponse) {
                 case 1:
                     System.out.print("Enter task title: ");
-                    String title = scanner.next();
+                    String title = scanner.nextLine();
                     System.out.print("Enter task description: ");
-                    String description = scanner.next();
+                    String description = scanner.nextLine();
 
                     // Validate due date format
                     String dueDate;
                     while (true) {
                         System.out.print("Enter task due date (YYYY-MM-DD): ");
-                        dueDate = scanner.next();
+                        dueDate = scanner.nextLine();
                         try {
                             java.time.LocalDate.parse(dueDate, java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd"));
                             break; // valid format
@@ -69,7 +69,6 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Listing all tasks:");
                     taskManager.listTasks();
                     break;
 

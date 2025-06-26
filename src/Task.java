@@ -68,13 +68,12 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", dueDate='" + dueDate + '\'' +
-                ", priority=" + priority +
-                ", completed=" + completed +
-                '}';
+        return "Task ID: " + id +
+                "\nTitle: " + title +
+                "\nDescription: " + description +
+                "\nDue Date: " + dueDate +
+                "\nPriority: " + priority +
+                "\nCompleted: " + (completed ? "Yes" : "No") +
+                "\n";
     }
 }

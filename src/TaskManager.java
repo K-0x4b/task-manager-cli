@@ -22,7 +22,8 @@ public class TaskManager {
             return;
         }
             for (Task task : tasks) {
-                System.out.println(task.toString());
+                System.out.println(task);
+                System.out.println("--------------------------------------------------");   
         }
        
     }
