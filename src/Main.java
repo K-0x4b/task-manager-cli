@@ -2,9 +2,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
+    static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        TaskManager taskManager = new TaskManager();
         boolean isWorking = true;
 
         int reponse = -1;
@@ -17,13 +18,52 @@ public class Main {
 
             try {
                 reponse = scanner.nextInt();
+                scanner.nextLine();
             } catch (InputMismatchException e) {
-                System.out.println(e);
+                System.out.println("Invalid input. Please enter a number between 1-5.");
+                scanner.nextLine();
+                continue;
             }
 
             switch (reponse) {
                 case 1:
-                    
+                    System.out.print("Enter task title: ");
+                    String title = scanner.next();
+                    System.out.print("Enter task description: ");
+                    String description = scanner.next();
+
+                    // Validate due date format
+                    String dueDate;
+                    while (true) {
+                        System.out.print("Enter task due date (YYYY-MM-DD): ");
+                        dueDate = scanner.next();
+                        try {
+                            java.time.LocalDate.parse(dueDate, java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                            break; // valid format
+                        } catch (java.time.format.DateTimeParseException e) {
+                            System.out.println("Invalid date format. Please use YYYY-MM-DD.");
+                        }
+                    }
+
+                    System.out.print("Enter task priority (1-5): ");
+                    int priority = -1;
+                    while (true) {
+                        try {
+                            priority = scanner.nextInt();
+                            scanner.nextLine();
+                            if (priority >= 1 && priority <= 5) {
+                                break;
+                            } else {
+                                System.out.println("Priority must be between 1 and 5. Please try again.");
+                            }
+                        } catch (InputMismatchException e) {
+                            System.out.println("Invalid input. Please enter a number between 1-5.");
+                            scanner.nextLine();
+                        }
+                    }
+
+                    taskManager.addTask(title, description, dueDate, priority);
+                    System.out.println("Task added successfully!");
                     break;
 
                 case 2:
@@ -44,10 +84,12 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Enter anumber between 1-5");
+                    System.out.println("Invalid choice. Please enter a number between 1-5.");
                     break;
             }
         }
+
+        scanner.close();
     }
 
     public static void printChoices() {
@@ -59,4 +101,5 @@ public class Main {
         System.out.println("5. Exit");
 
     }
+
 }
