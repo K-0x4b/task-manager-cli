@@ -1,28 +1,72 @@
 # Task Manager CLI
 
-A clean and efficient **command-line Task Management application** built in Java. This project demonstrates key programming concepts including object-oriented design, collections, user input handling, and modular code structure.
+[![Java](https://img.shields.io/badge/Java-17%2B-blue.svg)](https://www.oracle.com/java/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+A straightforward Java command-line app for managing your daily tasks efficiently. Quickly add, list, complete, and delete tasks via an intuitive terminal interface.
 
 ---
 
-## 📌 Features
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
+
+---
+
+## Features
 
 - Add tasks with title, description, due date, and priority
-- List all tasks with full details
+- View all tasks in a list
 - Mark tasks as completed
 - Delete tasks by ID
-- Interactive CLI with robust input validation
+- Simple and interactive CLI with input validation
 
 ---
 
-## 🚀 Technologies
+## Installation
 
-- Java 17+
-- CLI-based interface
-- Standard Java libraries only
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/K-0x4b/task-manager-cli.git
+   cd task-manager-cli
+   ```
+
+2. **Compile the source code:**
+   ```bash
+   cd src
+   javac *.java
+   ```
 
 ---
 
-## 📁 Project Structure
+## Usage
+
+1. **Run the application:**
+   ```bash
+   java Main
+   ```
+2. **Example session:**
+   ```
+   ==== Task Manager ====
+   1. Add Task
+   2. List Tasks
+   3. Mark Task as Completed
+   4. Delete Task
+   5. Exit
+   Enter your choice: 1
+   ...
+   ```
+
+---
+
+## Project Structure
 
 ```
 task-manager-cli/
@@ -36,34 +80,28 @@ task-manager-cli/
 
 ---
 
-## 🧪 How to Run
-```bash
-cd src
-javac *.java          # compile all Java files
-java Main             # run Main class
-```
----
+## Roadmap
 
-## 🧠 Concepts Practiced
-
-- Object-Oriented Programming (OOP)
-- Collections (ArrayList)
-- Control flow and loops
-- User input and validation
-- Clean code structure
+- [ ] Add sorting and filtering for tasks
+- [ ] Implement search by keyword
+- [ ] Improve error and help messages
+- [ ] Enhance input validation
 
 ---
 
-## 🛠️ Potential Future Improvements
+## Contributing
 
-- File saving/loading support
-- Sorting/filtering by due date or priority
-- Search by keyword
-- GUI version using JavaFX or Swing
+Pull requests and suggestions are welcome! Please open an issue to discuss changes or enhancements.
 
 ---
 
-## 👨‍💻 Author
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Author
 
 **Kareem MohamedElhassan**  
 GitHub: [@K-0x4b](https://github.com/K-0x4b)
