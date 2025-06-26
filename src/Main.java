@@ -27,47 +27,9 @@ public class Main {
 
             switch (response) {
                 case 1:
-                    System.out.print("Enter task title: ");
-                    String title = scanner.nextLine();
-                    System.out.print("Enter task description: ");
-                    String description = scanner.nextLine();
-
-                    // Validate due date format
-                    String dueDate;
-                    while (true) {
-                        System.out.print("Enter task due date (YYYY-MM-DD): ");
-                        dueDate = scanner.nextLine();
-                        try {
-                            java.time.LocalDate.parse(dueDate, java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-                            break; // valid format
-                        } catch (java.time.format.DateTimeParseException e) {
-                            System.out.println("Invalid date format. Please use YYYY-MM-DD.");
-                        }
-                    }
-
-                    
-                    int priority = -1;
-                    while (true) {
-                        try {
-                            
-                            System.out.print("Enter task priority (1-5): ");
-                            priority = scanner.nextInt();
-                            scanner.nextLine();
-                            if (priority >= 1 && priority <= 5) {
-                                break;
-                            } else {
-                                System.out.println("Priority must be between 1 and 5. Please try again.");
-                            }
-                        } catch (InputMismatchException e) {
-                            System.out.println("Invalid input. Please enter a number between 1-5.");
-                            scanner.nextLine();
-                        }
-                    }
-
-                    taskManager.addTask(title, description, dueDate, priority);
-                    System.out.println("Task added successfully!");
+                    addTaskWithInput(taskManager);
                     break;
-
+                    
                 case 2:
                     taskManager.listTasks();
                     break;
@@ -128,6 +90,49 @@ public class Main {
         System.out.println("4. Delete Task");
         System.out.println("5. Exit");
 
+    }
+
+    public static void addTaskWithInput(TaskManager taskManager){
+
+                    System.out.print("Enter task title: ");
+                    String title = scanner.nextLine();
+                    System.out.print("Enter task description: ");
+                    String description = scanner.nextLine();
+
+                    // Validate due date format
+                    String dueDate;
+                    while (true) {
+                        System.out.print("Enter task due date (YYYY-MM-DD): ");
+                        dueDate = scanner.nextLine();
+                        try {
+                            java.time.LocalDate.parse(dueDate, java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                            break; // valid format
+                        } catch (java.time.format.DateTimeParseException e) {
+                            System.out.println("Invalid date format. Please use YYYY-MM-DD.");
+                        }
+                    }
+
+                    
+                    int priority = -1;
+                    while (true) {
+                        try {
+                            
+                            System.out.print("Enter task priority (1-5): ");
+                            priority = scanner.nextInt();
+                            scanner.nextLine();
+                            if (priority >= 1 && priority <= 5) {
+                                break;
+                            } else {
+                                System.out.println("Priority must be between 1 and 5. Please try again.");
+                            }
+                        } catch (InputMismatchException e) {
+                            System.out.println("Invalid input. Please enter a number between 1-5.");
+                            scanner.nextLine();
+                        }
+                    }
+
+                    taskManager.addTask(title, description, dueDate, priority);
+                    System.out.println("Task added successfully!");
     }
 
 }
