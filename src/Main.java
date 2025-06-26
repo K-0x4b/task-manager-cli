@@ -90,7 +90,20 @@ public class Main {
                     break;
 
                 case 4:
-                  
+                    System.out.print("Enter task ID to delete: ");
+                    int idToDelete;
+                    try {
+                        idToDelete = scanner.nextInt();
+                        scanner.nextLine();
+                        if (taskManager.delteTask(idToDelete)) {
+                            System.out.println("Task deleted successfully.");
+                        } else {
+                            System.out.println("Task not found with ID: " + idToDelete);
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a valid task ID.");
+                        scanner.nextLine();
+                    }   
                     break;
 
                 case 5:
