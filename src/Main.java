@@ -95,7 +95,7 @@ public class Main {
                     try {
                         idToDelete = scanner.nextInt();
                         scanner.nextLine();
-                        if (taskManager.delteTask(idToDelete)) {
+                        if (taskManager.deleteTask(idToDelete)) {
                             System.out.println("Task deleted successfully.");
                         } else {
                             System.out.println("Task not found with ID: " + idToDelete);
