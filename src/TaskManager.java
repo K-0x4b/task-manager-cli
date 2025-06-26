@@ -17,7 +17,7 @@ public class TaskManager {
     }
 
     public void listTasks() {
-        if (task.isEmpty()) {
+        if (tasks.isEmpty()) {
             System.out.println("No tasks available.");
             return;
         }
@@ -29,7 +29,7 @@ public class TaskManager {
 
     public boolean markTaskCompleted(int id) {
         for (Task task : tasks) {
-            if (task.getId == id) {
+            if (task.getId() == id) {
                 task.setCompleted(true);
                 return true;
             }
@@ -39,7 +39,7 @@ public class TaskManager {
 
     public boolean delteTask(int id) {
         for (Task task : tasks) {
-            if (task.getId == id) {
+            if (task.getId() == id) {
                 tasks.remove(task);
                 return true;
             }
@@ -49,7 +49,7 @@ public class TaskManager {
 
     public Task findTaskById(int id) {
         for (Task task : tasks) {
-            if (task.getId == id) {
+            if (task.getId() == id) {
                 return task;
             }
         }
