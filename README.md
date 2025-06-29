@@ -9,6 +9,7 @@ A simple Java command-line application for managing your daily tasks. Add, view,
 
 ## Table of Contents
 
+- [Overview](#overview)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -17,6 +18,12 @@ A simple Java command-line application for managing your daily tasks. Add, view,
 - [Contributing](#contributing)
 - [License](#license)
 - [Author](#author)
+
+---
+
+## Overview
+
+**Task Manager CLI** is a lightweight Java application that helps you stay organized by letting you keep track of tasks, set priorities, and mark tasks as completed—all through an intuitive terminal interface.
 
 ---
 
@@ -34,7 +41,7 @@ A simple Java command-line application for managing your daily tasks. Add, view,
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/K-0x4b/task-manager-cli.git
+   git clone https://github.com/0x-4b/task-manager-cli.git
    cd task-manager-cli
    ```
 
@@ -93,7 +100,7 @@ task-manager-cli/
 ## Contributing
 
 Pull requests and suggestions are welcome!  
-Please [open an issue](https://github.com/K-0x4b/task-manager-cli/issues) to discuss changes or enhancements, or submit a pull request.
+Please [open an issue](https://github.com/0x-4b/task-manager-cli/issues) to discuss changes or enhancements, or submit a pull request.
 
 ---
 
@@ -105,7 +112,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Author
 
-**Kareem MohamedElhassan**  
-GitHub: [@K-0x4b](https://github.com/K-0x4b)
+**0x-4b**  
+GitHub: [@0x-4b](https://github.com/0x-4b)
 
 ---
